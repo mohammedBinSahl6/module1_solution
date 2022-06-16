@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="LunchCheck">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>check lunch</title>
     <script src="angular.min.js"></script>
-</head>
+    <link rel="stylesheet" href="st.css">
+</head> 
 <body>
-   <div>
+   <div ng-controller="adding">
     <label for="foods">put your items </label>
-    <input id="foods" type="text">
-    <button >check if too much</button>
+    <input id="foods" type="text" ng-model = 'foods'>
+    <button ng-click="givemessage();">check if too much</button>
+
+      <h3> {{givemessage()}} </h3>
 
    </div>
 
